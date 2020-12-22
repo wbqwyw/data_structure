@@ -287,4 +287,12 @@ public class ArrayQueue {
 > - 优化为环形队列
 >
 >   ![image-20201222113005175](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201222113005175.png)
+##### 链表
 
+> `介绍`
+>
+> - 链表是一个有序列表，它的内存存储如下：
+
+![image-20201222230516166](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201222230516166.png)
+
+![image-20201222232432311](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201222232432311.png)
