@@ -1,38 +1,38 @@
-# `Êı¾İ½á¹¹ÓëËã·¨`
+# `æ•°æ®ç»“æ„ä¸ç®—æ³•`
 
-### `ÏßĞÔ½á¹¹ºÍ·ÇÏßĞÔ½á¹¹`
+### `çº¿æ€§ç»“æ„å’Œéçº¿æ€§ç»“æ„`
 
-> *ÏßĞÔ½á¹¹*:
+> *çº¿æ€§ç»“æ„*:
 >
-> - ÔªËØÖ®¼ä´æÔÚÒ»¶ÔÒ»µÄ¹ØÏµ£¬ÀıÈç£ºa[0]=1
-> - ÓĞÁ½ÖÖ²»Í¬µÄ´æ´¢½á¹¹£¬¼°Ë³Ğò´æ´¢½á¹¹ºÍÁ´Ê½´æ´¢½á¹¹¡£Ë³Ğò´æ´¢µÄÏßĞÔ±í³ÆÎªË³Ğò±í£¬Ë³Ğò±íÖĞ´æ´¢µÄÔªËØÊÇÁ¬ĞøµÄ¡£
-> - Á´Ê½´æ´¢µÄÏßĞÔ±í³ÆÎªÁ´±í£¬Á´±íÖĞµÄÔªËØ²»Ò»¶¨ÊÇÁ¬ĞøµÄ£¬ÔªËØ½ÚµãÖĞ´æ·ÅÔªËØ±¾ÉíÒÔ¼°ÏàÁÚÔªËØµÄµØÖ·ĞÅÏ¢
-> - ÏßĞÔ½á¹¹³£¼ûµÄÓĞ£ºÊı×é¡¢¶ÓÁĞ¡¢Á´±í¡¢Õ»
+> - å…ƒç´ ä¹‹é—´å­˜åœ¨ä¸€å¯¹ä¸€çš„å…³ç³»ï¼Œä¾‹å¦‚ï¼ša[0]=1
+> - æœ‰ä¸¤ç§ä¸åŒçš„å­˜å‚¨ç»“æ„ï¼ŒåŠé¡ºåºå­˜å‚¨ç»“æ„å’Œé“¾å¼å­˜å‚¨ç»“æ„ã€‚é¡ºåºå­˜å‚¨çš„çº¿æ€§è¡¨ç§°ä¸ºé¡ºåºè¡¨ï¼Œé¡ºåºè¡¨ä¸­å­˜å‚¨çš„å…ƒç´ æ˜¯è¿ç»­çš„ã€‚
+> - é“¾å¼å­˜å‚¨çš„çº¿æ€§è¡¨ç§°ä¸ºé“¾è¡¨ï¼Œé“¾è¡¨ä¸­çš„å…ƒç´ ä¸ä¸€å®šæ˜¯è¿ç»­çš„ï¼Œå…ƒç´ èŠ‚ç‚¹ä¸­å­˜æ”¾å…ƒç´ æœ¬èº«ä»¥åŠç›¸é‚»å…ƒç´ çš„åœ°å€ä¿¡æ¯
+> - çº¿æ€§ç»“æ„å¸¸è§çš„æœ‰ï¼šæ•°ç»„ã€é˜Ÿåˆ—ã€é“¾è¡¨ã€æ ˆ
 >
-> *·ÇÏßĞÔ½á¹¹*:
+> *éçº¿æ€§ç»“æ„*:
 >
-> - ·ÇÏßĞÔ½á¹¹°üÀ¨£º¶şÎ»Êı×é¡¢¶àÎ¬Êı×é¡¢¹ãÒå±í¡¢Ê÷½á¹¹¡¢Í¼½á¹¹	  
+> - éçº¿æ€§ç»“æ„åŒ…æ‹¬ï¼šäºŒä½æ•°ç»„ã€å¤šç»´æ•°ç»„ã€å¹¿ä¹‰è¡¨ã€æ ‘ç»“æ„ã€å›¾ç»“æ„	  
 
-### `Ï¡ÊèÊı×éºÍ¶ÓÁĞ`
+### `ç¨€ç–æ•°ç»„å’Œé˜Ÿåˆ—`
 
-> **`½éÉÜ`**:µ±Ò»¸öÊı×éÖĞµÄÔªËØ´ó²¿·ÖÎª0£¬»òÕßÎªÍ¬Ò»¸öÖµµÄÊı×éÊ±£¬¿ÉÒÔÊ¹ÓÃÏ¡ÊèÊı×é±£´æ¸ÃÊı×é¡£
+> **`ä»‹ç»`**:å½“ä¸€ä¸ªæ•°ç»„ä¸­çš„å…ƒç´ å¤§éƒ¨åˆ†ä¸º0ï¼Œæˆ–è€…ä¸ºåŒä¸€ä¸ªå€¼çš„æ•°ç»„æ—¶ï¼Œå¯ä»¥ä½¿ç”¨ç¨€ç–æ•°ç»„ä¿å­˜è¯¥æ•°ç»„ã€‚
 
-> Ï¡ÊèÊı×éµÄ´¦Àí·½Ê½£º
+> ç¨€ç–æ•°ç»„çš„å¤„ç†æ–¹å¼ï¼š
 >
-> - ¼ÇÂ¼Êı×éÖĞÓĞ¼¸ĞĞ¼¸ÁĞ£¬ÓĞ¶àÉÙ¸ö²»Í¬µÄÖµ¡£
-> - °Ñ¾ßÓĞ²»Í¬ÖµµÄÔªËØµÄĞĞÁĞ¼°Öµ¼ÇÂ¼ÔÚÒ»¸öĞ¡¹æÄ£µÄÊı×éÖĞ£¬´Ó¶øËõĞ¡³ÌĞòµÄ¹æÄ£¡£
+> - è®°å½•æ•°ç»„ä¸­æœ‰å‡ è¡Œå‡ åˆ—ï¼Œæœ‰å¤šå°‘ä¸ªä¸åŒçš„å€¼ã€‚
+> - æŠŠå…·æœ‰ä¸åŒå€¼çš„å…ƒç´ çš„è¡Œåˆ—åŠå€¼è®°å½•åœ¨ä¸€ä¸ªå°è§„æ¨¡çš„æ•°ç»„ä¸­ï¼Œä»è€Œç¼©å°ç¨‹åºçš„è§„æ¨¡ã€‚
 
-![image-20201221214517123](src\main\resource\image\image-20201221214517123.png)
+![image-20201221214517123](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221214517123.png)
 
-> ¾ÙÀı
+> ä¸¾ä¾‹
 
-![image-20201221214639682](src\main\resource\image\image-20201221214639682.png)
+![image-20201221214639682](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221214639682.png)
 
-![image-20201221215124602](src\main\resource\image\image-20201221215124602.png)
+![image-20201221215124602](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221215124602.png)
 
-![image-20201221215752869](src\main\resource\image\image-20201221215752869.png)
+![image-20201221215752869](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221215752869.png)
 
-![image-20201221215907737](src\main\resource\image\image-20201221215907737.png)
+![image-20201221215907737](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221215907737.png)
 ```java
 package main.test.sparsearray;
 
@@ -43,20 +43,20 @@ import java.util.stream.Stream;
 
 /**
  * @ClassName SparseArray
- * @Description Ï¡ÊèÊı×é
+ * @Description ç¨€ç–æ•°ç»„
  * @Author wbq
  * @Date 2020/12/21 22:18
  * @Version 1.0
  */
 public class SparseArray {
     public static void main(String[] args) {
-        //´´½¨Ò»¸öÏ¡ÊèÊı×é 11 * 11
-        // 0±íÊ¾Ã»ÓĞÆå×Ó£¬1´ú±í°××Ó£¬2´ú±íºÚ×Ó
+        //åˆ›å»ºä¸€ä¸ªç¨€ç–æ•°ç»„ 11 * 11
+        // 0è¡¨ç¤ºæ²¡æœ‰æ£‹å­ï¼Œ1ä»£è¡¨ç™½å­ï¼Œ2ä»£è¡¨é»‘å­
         int[][] sparseArray = new int[11][11];
         sparseArray[1][2] = 1;
         sparseArray[2][3] = 2;
-        //¼ÇÂ¼·Ç0Êı×ÖµÄ¸öÊı
-        //³£¹æĞ´·¨
+        //è®°å½•é0æ•°å­—çš„ä¸ªæ•°
+        //å¸¸è§„å†™æ³•
         for (int[] ints : sparseArray) {
             for (int anInt : ints) {
                 System.out.printf("%d\t", anInt);
@@ -66,7 +66,7 @@ public class SparseArray {
         int sum = (int) Arrays.stream(sparseArray)
                 .flatMapToInt((c) -> Arrays.stream(c).filter(a -> a > 0)).count();
         System.out.println(sum);
-        //´´½¨Ñ¹ËõµÄÏ¡ÊèÊı×é
+        //åˆ›å»ºå‹ç¼©çš„ç¨€ç–æ•°ç»„
         int[][] sparseArr = new int[sum + 1][3];
         sparseArr[0][0] = sparseArray.length;
         sparseArr[0][1] = sparseArray[0].length;
@@ -82,12 +82,12 @@ public class SparseArray {
                 }
             }
         }
-        System.out.println("==========Ñ¹ËõµÄÏ¡ÊèÊı×é=========");
+        System.out.println("==========å‹ç¼©çš„ç¨€ç–æ•°ç»„=========");
         for (int i = 0; i < sparseArr.length; i++) {
             System.out.printf("%d\t%d\t%d\t\n", sparseArr[i][0], sparseArr[i][1], sparseArr[i][2]);
         }
 
-        System.out.println("=========½«Ñ¹ËõµÄÏ¡ÊèÊı×é»¹Ô­³ÉÏ¡ÊèÊı×é=========");
+        System.out.println("=========å°†å‹ç¼©çš„ç¨€ç–æ•°ç»„è¿˜åŸæˆç¨€ç–æ•°ç»„=========");
 
         int[][] newSpareArray = new int[sparseArr[0][0]][sparseArr[0][1]];
         for (int i = 1; i < sparseArr.length; i++) {
@@ -103,4 +103,4 @@ public class SparseArray {
 }
 
 ```
-![image-20201221232828400](src\main\resource\image\image-20201221232828400.png)
+![image-20201221232828400](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201221232828400.png)
