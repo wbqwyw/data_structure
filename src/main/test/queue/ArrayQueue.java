@@ -11,8 +11,9 @@ import java.util.Scanner;
  */
 public class ArrayQueue {
     public static void main(String[] args) {
-        ArrayQueue arrayQueue = new ArrayQueue(3);
         Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一个整数，初始化数组队列");
+        ArrayQueue arrayQueue = new ArrayQueue(scanner.nextInt());
         System.out.println("h:show");
         System.out.println("d:add");
         System.out.println("g:getOne");
@@ -38,6 +39,7 @@ public class ArrayQueue {
                     }
                     break;
                 default:
+                    scanner.close();
                     loop = false;
                     break;
             }
