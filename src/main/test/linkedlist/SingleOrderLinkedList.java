@@ -1,6 +1,7 @@
 package main.test.linkedlist;
 
 import java.net.HttpRetryException;
+import java.util.Stack;
 
 /**
  * @ClassName SingleOrderLinkedList
@@ -16,25 +17,38 @@ public class SingleOrderLinkedList {
         HeroNode hero2 = new HeroNode(2, "卢俊义", "玉麒麟");
         HeroNode hero3 = new HeroNode(3, "吴用", "智多星");
         HeroNode hero4 = new HeroNode(4, "林冲", "豹子头");
+
+        HeroNode hero5 = new HeroNode(5, "李逵", "黑旋风");
+        HeroNode hero6 = new HeroNode(6, "鲁智深", "花和尚");
+        HeroNode hero7 = new HeroNode(7, "杨志", "青面兽");
         //创建要给链表
         SingleOrderLinkedList singleLinkedList = new SingleOrderLinkedList();
         //加入
         singleLinkedList.add(hero1);
         singleLinkedList.add(hero3);
-        singleLinkedList.add(hero4);
-        singleLinkedList.add(hero2);
+        singleLinkedList.add(hero6);
+        singleLinkedList.add(hero7);
+        SingleOrderLinkedList singleLinkedList2 = new SingleOrderLinkedList();
+        singleLinkedList2.add(hero5);
+        singleLinkedList2.add(hero2);
+        singleLinkedList2.add(hero4);
         // 测试一下单链表的反转功能
         System.out.println("原来链表的情况~~");
+        singleLinkedList.show();
+        singleLinkedList.merge(singleLinkedList2);
+        System.out.println("合并一个链表之后~~");
         singleLinkedList.show();
         System.out.println(singleLinkedList.size());
 //        singleLinkedList = singleLinkedList.reverse(singleLinkedList);
 //        singleLinkedList.reverse2(singleLinkedList);
+        System.out.println("=============reversePrint=============");
+        singleLinkedList.reversePrint(singleLinkedList.head);
         singleLinkedList.reverse3();
         System.out.println("=============reverse=============");
         singleLinkedList.show();
         System.out.println("=============update=============");
-        HeroNode hero5 = new HeroNode(2, "卢俊义", "玉麒麟~");
-        singleLinkedList.update(hero5);
+        HeroNode hero100 = new HeroNode(2, "卢俊义", "玉麒麟~");
+        singleLinkedList.update(hero100);
         singleLinkedList.show();
         System.out.println("=============findLast=============");
         singleLinkedList.findLast(3);
@@ -155,7 +169,7 @@ public class SingleOrderLinkedList {
         int m = sl.size();
         HeroNode temp = sl.head;
         int n = 0;
-        while (m == 0) {
+        while (!(m == 0)) {
             if (n == m) {
                 temp.next = null;
                 newList.add2(temp);
@@ -178,7 +192,7 @@ public class SingleOrderLinkedList {
         int m = size();
         int n = 0;
         HeroNode temp = head;
-        while (m == n) {
+        while (!(m == n)) {
             n++;
             temp = temp.next;
             HeroNode node = new HeroNode(temp.no, temp.name, temp.minName);
@@ -224,19 +238,52 @@ public class SingleOrderLinkedList {
         sl.head.next = newHead.next;
     }
 
+    /**
+     * @return
+     * @Author wangbq
+     * @Description 反转打印，不改变原链表结构
+     * @Date 15:14 2020/12/24
+     * @Param
+     */
+    public void reversePrint(HeroNode head) {
+        if (head.next == null) {
+            System.out.println("链表为空，不能打印");
+        }
+        Stack<HeroNode> heroNodes = new Stack<>();
+        HeroNode temp = head.next;
+        while (temp != null) {
+            heroNodes.push(temp);
+            temp = temp.next;
+        }
+        while (!heroNodes.empty()) {
+            System.out.println(heroNodes.pop());
+        }
+    }
+
     public void update(HeroNode node) {
         if (isEmpty()) {
             System.out.println("链表为空");
         }
         HeroNode temp = head.next;
-        while (true) {
-            if (temp == null) {
-                break;
-            }
+        while (temp != null) {
             if (temp.no == node.no) {
                 temp.name = node.name;
                 temp.minName = node.minName;
             }
+            temp = temp.next;
+        }
+    }
+
+    /**
+     * 链表合并
+     */
+    public void merge(SingleOrderLinkedList a) {
+        if (a.isEmpty()) {
+            System.out.println("要添加的链表为空");
+        }
+        HeroNode temp = a.head.next;
+        while (temp != null) {
+            this.add(new HeroNode(temp.no, temp.name, temp.minName));
             temp = temp.next;
         }
     }
@@ -247,10 +294,7 @@ public class SingleOrderLinkedList {
         }
         HeroNode temp = head.next;
         HeroNode temp_pre = head;
-        while (true) {
-            if (temp == null) {
-                break;
-            }
+        while (temp != null) {
             if (temp.no == node.no) {
                 temp_pre.next = temp.next;
                 break;
