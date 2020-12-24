@@ -35,9 +35,12 @@ public class SingleOrderLinkedList {
         HeroNode hero5 = new HeroNode(2, "卢俊义", "玉麒麟~");
         singleLinkedList.update(hero5);
         singleLinkedList.show();
+        System.out.println("=============findLast=============");
+        singleLinkedList.findLast(3);
         System.out.println("=============delete=============");
-        HeroNode hero6 = new HeroNode(2, "卢俊义", "玉麒麟~");
-        singleLinkedList.delete(hero6);
+//        HeroNode hero6 = new HeroNode(2, "卢俊义", "玉麒麟~");
+//        singleLinkedList.delete(hero6);
+        singleLinkedList.delete2(2);
         singleLinkedList.show();
     }
 
@@ -102,6 +105,29 @@ public class SingleOrderLinkedList {
             temp = temp.next;
         }
         return length;
+    }
+
+    /**
+     * @return
+     * @Author wangbq
+     * @Description 查找倒数第index个节点
+     * @Date 11:07 2020/12/24
+     * @Param
+     */
+    public void findLast(int index) {
+        if (isEmpty()) {
+            System.out.println("链表为空");
+        }
+        int size = size();
+        if (index <= 0 || index > size) {
+            System.out.println("该节点不在链表范围内");
+            return;
+        }
+        HeroNode temp = head.next;
+        for (int i = 0; i < size - index; i++) {
+            temp = temp.next;
+        }
+        System.out.println(temp.toString());
     }
 
     /**
@@ -218,7 +244,26 @@ public class SingleOrderLinkedList {
             temp_pre = temp_pre.next;
             temp = temp.next;
         }
+    }
 
+    public void delete2(int no) {
+        boolean flag = false;
+        HeroNode temp = head;
+        while (true) {
+            if (temp.next == null) {
+                break;
+            }
+            if (temp.next.no == no) {
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if (flag) {
+            temp.next = temp.next.next;
+        } else {
+            System.out.println("没有改节点");
+        }
     }
 
 }
