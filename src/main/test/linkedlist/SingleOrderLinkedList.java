@@ -28,7 +28,8 @@ public class SingleOrderLinkedList {
         singleLinkedList.show();
         System.out.println(singleLinkedList.size());
 //        singleLinkedList = singleLinkedList.reverse(singleLinkedList);
-        singleLinkedList.reverse2(singleLinkedList);
+//        singleLinkedList.reverse2(singleLinkedList);
+        singleLinkedList.reverse3();
         System.out.println("=============reverse=============");
         singleLinkedList.show();
         System.out.println("=============update=============");
@@ -154,7 +155,7 @@ public class SingleOrderLinkedList {
         int m = sl.size();
         HeroNode temp = sl.head;
         int n = 0;
-        while (true) {
+        while (m == 0) {
             if (n == m) {
                 temp.next = null;
                 newList.add2(temp);
@@ -164,12 +165,28 @@ public class SingleOrderLinkedList {
             }
             n++;
             temp = temp.next;
-            if (m == 0) {
-                break;
-            }
         }
         sl = newList;
         return sl;
+    }
+
+    public void reverse3() {
+        if (isEmpty()) {
+            System.out.println("Á´±íÎª¿Õ");
+        }
+        HeroNode newHead = new HeroNode(0, null, null);
+        int m = size();
+        int n = 0;
+        HeroNode temp = head;
+        while (m == n) {
+            n++;
+            temp = temp.next;
+            HeroNode node = new HeroNode(temp.no, temp.name, temp.minName);
+            HeroNode next = newHead.next;
+            node.next = next;
+            newHead.next = node;
+        }
+        head.next = newHead.next;
     }
 
     /**
@@ -197,10 +214,7 @@ public class SingleOrderLinkedList {
         }
         HeroNode newHead = new HeroNode(0, null, null);
         HeroNode temp = sl.head.next;
-        while (true) {
-            if (temp == null) {
-                break;
-            }
+        while (temp == null) {
             HeroNode node = new HeroNode(temp.no, temp.name, temp.minName);
             HeroNode next = newHead.next;
             newHead.next = node;
