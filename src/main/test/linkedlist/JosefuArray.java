@@ -3,7 +3,7 @@ package main.test.linkedlist;
 import java.util.Scanner;
 
 /**
- * @ClassName Josefu
+ * @ClassName JosefuArray
  * @Description 数组解决约瑟夫环的问题
  * 约瑟夫问题：设编号为1 2 3 ... n的个人坐一圈，约定编号为k的人开始从1报数，然后数到m的那个人
  * 出列，由下一个人继续开始从1报数，以此类推，直到所有人都出列。输出出列的编号
@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @Date 2020/12/24 16:47
  * @Version 1.0
  */
-public class Josefu {
+public class JosefuArray {
     public static void main(String[] args) {
         System.out.println("请输入一个整数，初始化队列");
         Scanner scanner = new Scanner(System.in);
