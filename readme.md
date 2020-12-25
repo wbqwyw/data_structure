@@ -807,5 +807,25 @@ class Josefu {
     }
 }
 ```
+### 栈
 
+#### **栈的介绍**
+
+![image-20201224221142720](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224221142720.png)
+
+#### **栈的应用场景**
+
+![image-20201224221809759](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224221809759.png)
+
+![image-20201224224616661](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224224616661.png)
+
+![image-20201224224758961](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224224758961.png)
+
+![image-20201224225206989](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224225206989.png)
+
+![image-20201224225228881](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224225228881.png)
+
+![image-20201224225516855](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224225516855.png)
+
+![image-20201224230207765](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224230207765.png)
 
