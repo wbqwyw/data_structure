@@ -829,3 +829,20 @@ class Josefu {
 
 ![image-20201224230207765](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201224230207765.png)
 
+### `递归`
+
+> 递归就是函数自己调用自己
+
+![image-20201225150418390](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201225150418390.png)
+
+![image-20201225150553289](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201225150553289.png)
+
+![image-20201225152120985](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201225152120985.png)
+
+#### **8皇后问题**
+
+![image-20201225160141179](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201225160141179.png)
+
+### `排序算法`
+
+![image-20201225173458169](https://github.com/wbqwyw/data_structure/blob/master/src/main/resource/image/image-20201225173458169.png)
