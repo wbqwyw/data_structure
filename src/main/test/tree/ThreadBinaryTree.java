@@ -28,22 +28,38 @@ public class ThreadBinaryTree {
     }
 
     public void follList() {
+        follList(root);
+    }
+
+    public void follList(Node node) {
         if (root == null) {
             System.out.println("树为空");
             return;
         }
-        Node node = root;
-        while (node != null) {
-            while (node.leftType != 1) {
-                node = node.left;
-            }
-            System.out.println(node);
-            //也可以这么写if (node.rightType == 1) {  只要证明有右节点就行
-            //if (node.right != null && node.right.rightType == 0)
-            while (node.right != null) {
-                node = node.right;
-                System.out.println(node);
-            }
+        if (node.leftType != 1) {
+            follList(node.left);
+        }
+        if (node.rightType != 1) {
+            follList(node.right);
+        }
+        System.out.println(node);
+    }
+
+    public void preList2() {
+        preList2(root);
+    }
+
+    public void preList2(Node node) {
+        if (node == null) {
+            System.out.println("树为空");
+            return;
+        }
+        System.out.println(node);
+        if (node.leftType != 1) {
+            preList2(node.left);
+        }
+        if (node.right != null && node.rightType != 1) {
+            preList2(node.right);
         }
     }
 
@@ -53,6 +69,7 @@ public class ThreadBinaryTree {
             return;
         }
         Node node = root;
+        //node.right!=null 是为了有个结束，不然死循环
         while (node != null && node.right != null) {
             System.out.println(node);
             while (node.leftType != 1) {
@@ -62,6 +79,24 @@ public class ThreadBinaryTree {
             if (node.rightType == 1) {
                 node = node.right;
             }
+        }
+    }
+
+    public void midList2() {
+        midList2(root);
+    }
+
+    public void midList2(Node node) {
+        if (root == null) {
+            System.out.println("树为空");
+            return;
+        }
+        if (node.leftType != 1) {
+            midList2(node.left);
+        }
+        System.out.println(node);
+        if (node.right != null && node.rightType != 1) {
+            midList2(node.right);
         }
     }
 
