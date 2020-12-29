@@ -30,7 +30,7 @@ public class HuffmanTreeCode {
         System.out.println(Arrays.toString(huffCode));
         byte[] bytes = decode(huffCodeMap, huffCode);
         System.out.println(new String(bytes));
-        zipFile("D:\\电子书\\数据结构与算法\\尚硅谷_韩顺平\\图解.xlsx", "D:\\电子书\\数据结构与算法\\尚硅谷_韩顺平\\图解.zip");
+        zipFile("G:\\123.txt", "G:\\1234.txt");
         System.out.println("压缩完成");
     }
 
@@ -196,11 +196,13 @@ public class HuffmanTreeCode {
         byte[] bytes = new byte[len];
         int index = 0;
         for (int i = 0; i < sbuilder.length(); i += 8) {
-            if (i + 8 < sbuilder.length()) {
-                bytes[index] = (byte) Integer.parseInt(sbuilder.substring(i, i + 8), 2);
+            String strByte;
+            if (i + 8 > sbuilder.length()) {
+                strByte = sbuilder.substring(i);
             } else {
-                bytes[index] = (byte) Integer.parseInt(sbuilder.substring(i), 2);
+                strByte = sbuilder.substring(i, i + 8);
             }
+            bytes[index] = (byte) Integer.parseInt(strByte, 2);
             index++;
         }
         return bytes;
