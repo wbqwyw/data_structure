@@ -18,17 +18,17 @@ public class HuffmanCode {
     public static void main(String[] args) {
 
         //测试压缩文件
-//		String srcFile = "d://Uninstall.xml";
-//		String dstFile = "d://Uninstall.zip";
-//		
-//		zipFile(srcFile, dstFile);
-//		System.out.println("压缩文件ok~~");
+        String srcFile = "D:\\msdia80.dll";
+        String dstFile = "D:\\msdia80.zip";
+
+        zipFile(srcFile, dstFile);
+        System.out.println("压缩文件ok~~");
 
 
         //测试解压文件
-        String zipFile = "d://Uninstall.zip";
-        String dstFile = "d://Uninstall2.xml";
-        unZipFile(zipFile, dstFile);
+        String zipFile = "D:\\msdia80.zip";
+        String dstFiles = "D:\\msdia802.dll";
+        unZipFile(zipFile, dstFiles);
         System.out.println("解压成功!");
 		
 		/*

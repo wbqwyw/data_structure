@@ -23,15 +23,30 @@ public class HuffmanTreeCode {
     private static StringBuilder sbuilder = new StringBuilder();
 
     public static void main(String[] args) {
-        String content = "i like like like java do you like a java";
-        //将字符串转成字节数组
-        byte[] data = getByte(content);
-        byte[] huffCode = huffCode(data);
-        System.out.println(Arrays.toString(huffCode));
-        byte[] bytes = decode(huffCodeMap, huffCode);
-        System.out.println(new String(bytes));
-        zipFile("G:\\123.txt", "G:\\1234.txt");
+//        String content = "i like like like java do you like a java";
+//        //将字符串转成字节数组
+//        byte[] data = getByte(content);
+//        byte[] huffCode = huffCode(data);
+//        System.out.println(Arrays.toString(huffCode));
+//        byte[] bytes = decode(huffCodeMap, huffCode);
+//        System.out.println(new String(bytes));
+        zipFile("D:\\Java.png", "D:\\Javapng.zip");
         System.out.println("压缩完成");
+        unZipFile("D:\\Javapng.zip", "D:\\Java2.png");
+        System.out.println("解压完成");
+    }
+
+    public static void unZipFile(String srcFile, String dstFile) {
+        try (FileOutputStream fos = new FileOutputStream(dstFile);
+             FileInputStream fis = new FileInputStream(srcFile);
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+            byte[] bytes = (byte[]) ois.readObject();
+            Map<Byte, String> huffCodeMap = (Map<Byte, String>) ois.readObject();
+            byte[] result = decode(huffCodeMap, bytes);
+            fos.write(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //压缩文件
@@ -66,12 +81,16 @@ public class HuffmanTreeCode {
             int count = 1;
             boolean flag = true;
             while (flag) {
-                String s = sb.substring(i, i + count);
-                if (stringByteHashMap.containsKey(s)) {
-                    bytes.add(stringByteHashMap.get(s));
-                    flag = false;
+                if (i + count < sb.length()) {
+                    String s = sb.substring(i, i + count);
+                    if (stringByteHashMap.containsKey(s)) {
+                        bytes.add(stringByteHashMap.get(s));
+                        flag = false;
+                    } else {
+                        count++;
+                    }
                 } else {
-                    count++;
+                    flag = false;
                 }
             }
             i += count;
@@ -120,7 +139,7 @@ public class HuffmanTreeCode {
     }
 
     public static Map<Byte, Integer> byteToMap(byte[] arr) {
-        Map<Byte, Integer> map = new HashMap<>(10);
+        Map<Byte, Integer> map = new HashMap<>();
         if (arr == null) {
             return null;
         }
@@ -147,7 +166,8 @@ public class HuffmanTreeCode {
             Collections.sort(list);
             NodeCode left = list.get(0);
             NodeCode right = list.get(1);
-            NodeCode parent = new NodeCode((byte) 0, left.weight + right.weight);
+            //此处要赋值null，因为byte数组可能包含0，原来用0赋值，导致把0给冲掉了。产生丢失的情况
+            NodeCode parent = new NodeCode(null, left.weight + right.weight);
             parent.left = left;
             parent.right = right;
             list.remove(left);
@@ -169,7 +189,7 @@ public class HuffmanTreeCode {
         StringBuilder sb = new StringBuilder(stringBuilder);
         sb.append(code);
         if (node != null) {
-            if (node.data == 0) {
+            if (node.data == null) {
                 getHuffCode(node.left, "0", sb);
                 getHuffCode(node.right, "1", sb);
             } else {
@@ -211,12 +231,13 @@ public class HuffmanTreeCode {
 }
 
 class NodeCode implements Comparable<NodeCode> {
-    public byte data;
+    //要用引用类型Byte来赋值，不然不能赋值null，后续会有问题
+    public Byte data;
     public int weight;
     public NodeCode left;
     public NodeCode right;
 
-    public NodeCode(byte data, int weight) {
+    public NodeCode(Byte data, int weight) {
         this.data = data;
         this.weight = weight;
     }
