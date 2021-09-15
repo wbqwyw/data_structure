@@ -29,7 +29,9 @@ public class SingleLinkedListDemo {
 //		System.out.println("反转单链表~~");
 //		reversetList(singleLinkedList.getHead());
 //		singleLinkedList.list();
-		
+		singleLinkedList.del(1);
+		System.out.println("删除后的链表情况~~");
+		singleLinkedList.list();
 		System.out.println("测试逆序打印单链表, 没有改变链表的结构~~");
 		reversePrint(singleLinkedList.getHead());
 		
