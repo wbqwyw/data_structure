@@ -21,8 +21,8 @@ public class BubbleSort {
         bubbleSort(arr);//8000000 耗时 4678 4781 4806
         // bubbleSort2(arr);//8000000 耗时 13960 13154 12802
         long end = System.currentTimeMillis();
-        System.out.println(end - start);
-        // System.out.println(Arrays.toString(arr));
+        // System.out.println(end - start);
+        System.out.println(Arrays.toString(arr));
     }
 
 

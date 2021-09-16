@@ -1,50 +1,56 @@
 package main.test.search;
 
 /**
- * @ClassName InsertValueSearch
- * @Description ²åÖµ²éÕÒ
- * Ïà¶Ô¶ş·Ö²éÕÒÓÅ»¯¶øÒÑ£¬ÓÅ»¯µÄÊÇmidÖµµÄÑ¡¶¨
- * @Author wbq
- * @Date 2020/12/27 21:20
- * @Version 1.0
- */
+ * @program: data_structure
+ * @description: æ’å€¼æŸ¥æ‰¾
+ * @author: Mr.Wang
+ * @create: 2021-09-16 15:52
+ **/
 public class InsertValueSearch {
     public static void main(String[] args) {
         int[] arr = {1, 8, 10, 89, 1000, 1234};
-        System.out.println("index=" + insertValueSearch2(arr, 0, arr.length - 1, 89));
+
+        long start = System.currentTimeMillis();
+        int index = insertValueSearch(arr, 236);//8000000 ï¿½ï¿½Ê± 4678 4781 4806
+        // int index = insertValueSearch2(arr, 0, arr.length - 1, 89);//8000000 ï¿½ï¿½Ê± 13960 13154 12802
+        long end = System.currentTimeMillis();
+        System.out.println("ç´¢å¼•ï¼š" + index + " è€—æ—¶ï¼š" + (end - start));
+        // System.out.println("index=" + insertValueSearch2(arr, 0, arr.length - 1, 89));
     }
 
     /**
-     * ·Çµü´ú·½Ê½
+     * éè¿­ä»£
      */
     public static int insertValueSearch(int[] arr, int value) {
         if (arr.length < 1) {
-            System.out.println("Êı×éÎª¿Õ");
             return -1;
         }
         int left = 0;
         int right = arr.length - 1;
         while (left <= right) {
             int mid = left + (value - arr[left]) * (right - left) / (arr[right] - arr[left]);
-            if (arr[mid] == value) {
-                return mid;
-            }
-            if (arr[mid] < value) {
-                left = mid + 1;
-            }
-            if (arr[mid] > value) {
-                right = mid - 1;
+            //é˜²æ­¢æ•°ç»„è¶Šç•Œ
+            if (mid >= left && mid <= right) {
+                if (arr[mid] < value) {
+                    left = mid + 1;
+                } else if (arr[mid] > value) {
+                    right = mid - 1;
+                } else {
+                    return mid;
+                }
+            } else {
+                break;
             }
         }
         return -1;
     }
 
     /**
-     * µü´úµÄ·½Ê½
+     * è¿­ä»£
      */
     public static int insertValueSearch2(int[] arr, int left, int right, int value) {
         if (left > right || value < arr[left] || value > arr[right]) {
-            System.out.println("Ã»ÓĞ¸ÃÊı¾İ");
+            System.out.println("æ²¡æœ‰è¯¥æ•°æ®");
             return -1;
         }
         int mid = left + (right - left) * (value - arr[left]) / (arr[right] - arr[left]);
